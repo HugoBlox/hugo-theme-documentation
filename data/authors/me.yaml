@@ -13,7 +13,7 @@ postnominals:
 status:
   icon: "🍺"
 role: Graphics engineer
-bio: Liam Hauw is a graphics engineer specializing in mobile graphics quality and performance optimization. His core expertise lies in frame interpolation, super-resolution, and screen-space reflections, with a strong focus on integrating deep learning technologies into computer graphics.
+bio: Liam Hauw is a graphics engineer specializing in mobile graphics quality and performance optimization. His core expertise lies in frame interpolation, super-resolution, and screen-space effects, with a strong focus on integrating deep learning technologies into computer graphics.
 affiliations:
   - name: OPPO
     url: https://www.oppo.com/en/

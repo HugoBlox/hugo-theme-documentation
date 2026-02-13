@@ -1,6 +1,6 @@
 ---
 title: 'Home'
-date: 2025-12-21
+date: 2026-02-13
 type: landing
 
 design:
@@ -57,22 +57,22 @@ sections:
       items:
         - name: Physical simulation
           icon: beaker
-          description: Physically-based simulation workflows for interactive applications, with solver efficiency and numerical robustness in mind.
+          description: The numerical modeling of physical phenomena (such as rigid bodies, fluids, cloth, and collisions) to produce physically plausible behavior in virtual environments.
         - name: Real-time rendering
           icon: bolt
-          description: Real-time pipelines focused on image quality, frame stability, and efficient GPU execution.
+          description: The process of generating visually convincing images at interactive frame rates under strict performance and latency constraints.
         - name: GPU
           icon: server
-          description: GPU architecture, shader/compute execution models, and performance analysis for real-time workloads.
+          description: A highly parallel processor specialized for accelerating graphics pipelines and large-scale data-parallel computations.
         - name: Vulkan
           icon: queue-list
-          description: Explicit graphics API engineering such as resource management, synchronization, and frame graph style render orchestration.
+          description: A low-level, explicit graphics and compute API that provides fine-grained control of GPU resources for high-performance, cross-platform rendering.
         - name: Game engine
           icon: cube
-          description: Runtime architecture and tooling for scalable, data-driven, and performance-critical interactive systems.
+          description: A modular software framework that integrates rendering, physics, animation, audio, input, and tools to develop and run interactive applications.
         - name: Deep learning
           icon: cpu-chip
-          description: Applying neural networks to vision and graphics-adjacent tasks with practical, production-minded pipelines.
+          description: A machine learning paradigm based on multi-layer neural networks that learn complex representations for tasks such as recognition, generation, and optimization.
   - block: cta-card
     content:
       title: "One more thing"
