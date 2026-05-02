@@ -1,7 +1,7 @@
 name: Build
 
 env:
-  NODE_VERSION: '20'
+  NODE_VERSION: '22'
 
 on:
   # Standalone trigger for PR validation
@@ -65,7 +65,7 @@ jobs:
         VERSION=$(yq '.build.hugo_version // ""' hugoblox.yaml 2>/dev/null | grep -v '^null$' || true)
         
         # Fallback to a known stable version if not specified
-        DEFAULT_VERSION="0.154.5"
+        DEFAULT_VERSION="0.161.0"
         VERSION=${VERSION:-$DEFAULT_VERSION}
         
         # Validate version format (basic check)
@@ -83,6 +83,16 @@ jobs:
         if [ -f "package.json" ]; then
           echo "Installing Tailwind dependencies..."
           pnpm install --no-frozen-lockfile || npm install
+        fi
+
+    - name: Verify Tailwind CSS dependency
+      if: hashFiles('package.json') != ''
+      run: |
+        if ! node -e "require.resolve('@tailwindcss/cli/package.json')" 2>/dev/null; then
+          echo "::error title=Missing dependency '@tailwindcss/cli'::Hugo >= 0.161.0 requires the npm @tailwindcss/cli package. Add it to package.json:"
+          echo "::error::  pnpm add @tailwindcss/cli tailwindcss"
+          echo "::error::See https://github.com/HugoBlox/kit for upgrade instructions."
+          exit 1
         fi
 
     - name: Setup Hugo
